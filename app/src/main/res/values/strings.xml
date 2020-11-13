@@ -12,6 +12,28 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="btn_iniciar">Iniciar sesión</string>
+    <string name="arrobaa">"@"</string>
     <string name="btn_registro">Registrar</string>
     <string name="desc">Descripcion</string>
+    <string name="nombre_s">Nombre(s):</string>
+    <string name="apellido_paterno">Apellido paterno:</string>
+    <string name="apellido_materno">Apellido materno:</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento:</string>
+    <string name="sexo">Sexo:</string>
+    <string name="pais">País:</string>
+    <string name="correo_electronico">Correo electrónico:</string>
+    <string name="contrasena">Contraseña:</string>
+    <string name="confirmar_contrasena">Confirmar contraseña:</string>
+    <string name="registrar">Registrar</string>
+    <string-array name="Sexo">
+        <item>Prefiero no contestar</item>
+        <item>Mujer</item>
+        <item>Hombre</item>
+    </string-array>
+    <string-array name="Correo">
+        <item>gmail.com</item>
+        <item>hotmail.com</item>
+        <item>yahoo.com.mx</item>
+        <item>live.com.mx</item>
+    </string-array>
 </resources>

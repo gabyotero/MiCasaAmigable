@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#21B300</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorbtnsPantalla1">#6FFF98</color>
+    <color name="colorbtnRegistro">#FF6F85</color>
 </resources>
