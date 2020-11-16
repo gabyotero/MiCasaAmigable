@@ -153,7 +153,7 @@
             android:layout_width="169dp"
             android:layout_height="66dp"
             android:background="@color/colorbtnsPantalla1"
-            android:onClick="Login"
+            android:onClick="GetData"
             android:text="@string/btn_iniciar" />
 
         <Button

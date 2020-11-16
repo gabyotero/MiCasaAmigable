@@ -2,6 +2,7 @@ package com.gaby.micasaamigable;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -54,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
                 pass_log.getText().toString()).execute();
     }
 
+    public void GetData(View view){
+        new Restful(this, "GetData").execute();
+    }
+
+
     public void registro(View view){
         reg1.setVisibility(View.VISIBLE);
         reg2.setVisibility(View.VISIBLE);
@@ -79,5 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void mensaje(String s){
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
+
+    public void datosOk(){
+        mensaje("Ingreso correcto");
+        Intent i = new Intent(this,Formulario.class);
+        startActivity(i);      //Abrir una actividad nueva
     }
 }
