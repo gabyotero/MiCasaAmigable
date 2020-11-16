@@ -24,7 +24,7 @@ import java.net.UnknownHostException;
 public class Restful  extends AsyncTask<Void,Void,String[][]> {
 
     private String HTTP_RESTFUL;
-    private String url_p="https://pd2020.000webhostapp.com/";
+    private String url_p="https://casaamigable.000webhostapp.com/";
     private Context context;
     private String info,nombre,pass;
 
@@ -187,8 +187,8 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
     {
         switch(info)
         {
-            case "registro": return url_p+"control.php?action=registro&user="+nombre+"&pass="+pass;
-            case "login": return url_p+"control.php?action=login&user="+nombre+"&pass="+pass;
+            case "registro": return url_p+"control.php?action=registro&usr="+nombre+"&pass="+pass;
+            case "login": return url_p+"control.php?action=login&usr="+nombre+"&pass="+pass;
             case "GetData": return url_p+"control.php?action="+info;
 
             default: return url_p+"control_p.php?action=error";

@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText user_log, pass_log, user_reg, pass_reg;
-    Button btn_login, btn_reg, btn_reg2;
+    Button btn_login, btn_reg, btn_reg2, btn_inicio;
     LinearLayout login1, login2, login3, reg1, reg2;
 
     SharedPreferences pref ;//= getSharedPreferences("datos",MODE_PRIVATE); //documento
@@ -41,11 +41,16 @@ public class MainActivity extends AppCompatActivity {
         btn_login=(Button)findViewById(R.id.btn_start);
         btn_reg=(Button)findViewById(R.id.btn_registro);
         btn_reg2=(Button)findViewById(R.id.btn_registro2);
+        btn_inicio=(Button)findViewById(R.id.btn_inicio);
         login1=findViewById(R.id.login1);
         login2=findViewById(R.id.login2);
         login3=findViewById(R.id.login3);
         reg1=findViewById(R.id.registro1);
         reg2=findViewById(R.id.registro2);
+        reg1.setVisibility(View.GONE);
+        reg2.setVisibility(View.GONE);
+        btn_reg2.setVisibility(View.GONE);
+        btn_inicio.setVisibility(View.GONE);
 
     }
 
@@ -63,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
     public void registro(View view){
         reg1.setVisibility(View.VISIBLE);
         reg2.setVisibility(View.VISIBLE);
+        btn_reg2.setVisibility(View.VISIBLE);
+        btn_inicio.setVisibility(View.VISIBLE);
         login1.setVisibility(view.GONE);
         login2.setVisibility(view.GONE);
         login3.setVisibility(view.GONE);
@@ -78,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         login1.setVisibility(view.VISIBLE);
         login2.setVisibility(view.VISIBLE);
         login3.setVisibility(view.VISIBLE);
+        btn_reg2.setVisibility(view.GONE);
+        btn_inicio.setVisibility(view.GONE);
     }
     public void registroOk(){
         mensaje("Tu registro fue exitoso");

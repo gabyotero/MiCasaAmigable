@@ -11,9 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Registro"></activity>
-        <activity android:name=".logiin" >
-
-        </activity>
         <activity
             android:name=".MenuPrincipal"
             android:label="@string/title_activity_menu_principal"
