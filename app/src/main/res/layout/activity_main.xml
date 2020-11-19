@@ -60,7 +60,8 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/casa"
-        app:layout_constraintVertical_bias="0.494">
+        app:layout_constraintVertical_bias="0.494"
+        tools:visibility="visible">
 
         <TextView
             android:id="@+id/user_log"
@@ -86,7 +87,8 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6">
+        app:layout_constraintVertical_bias="0.6"
+        tools:visibility="visible">
 
         <TextView
             android:id="@+id/pass_log"
@@ -113,7 +115,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.724"
-        tools:visibility="invisible">
+        tools:visibility="gone">
 
         <TextView
             android:id="@+id/user_reg"
@@ -141,7 +143,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.83"
-        tools:visibility="invisible">
+        tools:visibility="gone">
 
         <TextView
             android:id="@+id/pass_reg"
@@ -190,6 +192,61 @@
             android:text="@string/btn_registro"
             android:visibility="visible"
             tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/apellidos"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/casa"
+        app:layout_constraintVertical_bias="0.618"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/last_name"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:text="Apellido" />
+
+        <EditText
+            android:id="@+id/edt_apellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nombres"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:text="Nombre" />
+
+        <EditText
+            android:id="@+id/edt_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
     </LinearLayout>
 

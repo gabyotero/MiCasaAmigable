@@ -26,8 +26,18 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
     private String HTTP_RESTFUL;
     private String url_p="https://casaamigable.000webhostapp.com/";
     private Context context;
-    private String info,nombre,pass;
+    private String info,nombre,pass,name,lastn;
 
+    public Restful(Context context, String info,String nombre,String pass, String name, String lastn) {
+        this.context = context;
+        this.info=info;
+        this.nombre=nombre;
+        this.pass=pass;
+        this.name=name;
+        this.lastn=lastn;
+        HTTP_RESTFUL=getURL(info);
+        Log.d("url","url:"+HTTP_RESTFUL);
+    }
     public Restful(Context context, String info,String nombre,String pass) {
         this.context = context;
         this.info=info;
