@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Login(View view){
-        new Restful(this, "login",
+               new Restful(this, "login",
                 user_log.getText().toString(),
                 pass_log.getText().toString()).execute();
     }
@@ -80,12 +80,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void registro(View view){
+        name.setText("");
+        lastn.setText("");
+        user_reg.setText("");
+        pass_reg.setText("");
         reg1.setVisibility(View.VISIBLE);
         reg2.setVisibility(View.VISIBLE);
         btn_reg2.setVisibility(View.VISIBLE);
         btn_inicio.setVisibility(View.VISIBLE);
         nombres.setVisibility(View.VISIBLE);
         apellidos.setVisibility(View.VISIBLE);
+        name.setVisibility(view.VISIBLE);
+        lastn.setVisibility(view.VISIBLE);
         login1.setVisibility(view.GONE);
         login2.setVisibility(view.GONE);
         login3.setVisibility(view.GONE);
@@ -96,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
                 pass_reg.getText().toString(),
                 name.getText().toString(),
                 lastn.getText().toString()).execute();
-
-
     }
     public void CancelReg(View view){
+        user_log.setText("");
+        pass_log.setText("");
         reg1.setVisibility(view.GONE);
         reg2.setVisibility(view.GONE);
         btn_reg2.setVisibility(view.GONE);
@@ -109,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
         login1.setVisibility(view.VISIBLE);
         login2.setVisibility(view.VISIBLE);
         login3.setVisibility(view.VISIBLE);
+        nombres.setVisibility(View.GONE);
+        apellidos.setVisibility(View.GONE);
 
     }
 

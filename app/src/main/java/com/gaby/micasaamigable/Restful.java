@@ -197,7 +197,7 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
     {
         switch(info)
         {
-            case "registro": return url_p+"control.php?action=registro&usr="+nombre+"&pass="+pass;
+            case "registro": return url_p+"control.php?action=registro&usr="+nombre+"&pass="+pass+"&name="+name+"&lastn"+lastn;
             case "login": return url_p+"control.php?action=login&usr="+nombre+"&pass="+pass;
             case "GetData": return url_p+"control.php?action="+info;
 
