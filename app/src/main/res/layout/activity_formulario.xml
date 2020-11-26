@@ -7,67 +7,50 @@
     tools:context=".Formulario">
 
 
-    <TextView
-        android:id="@+id/textView_form"
-        android:layout_width="86dp"
-        android:layout_height="28dp"
-        android:text="Formulario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
-        android:id="@+id/textView_p1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Número de habitantes en el hogar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView_form"
-        app:layout_constraintVertical_bias="0.061" />
-
-    <EditText
-        android:id="@+id/editText_r1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ingrese respuesta"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134" />
-
-    <TextView
-        android:id="@+id/textView_p2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="	Servicios disponibles en el hogar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206" />
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="199dp"
-        android:layout_height="145dp"
+        android:id="@+id/habitantes"
+        android:layout_width="310dp"
+        android:layout_height="56dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintHorizontal_bias="0.356"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308">
+        app:layout_constraintVertical_bias="0.093">
+
+        <TextView
+            android:id="@+id/textView_p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de habitantes en el hogar" />
+
+        <EditText
+            android:id="@+id/editText_r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese respuesta"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/servicios"
+        android:layout_width="259dp"
+        android:layout_height="156dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257">
+
+        <TextView
+            android:id="@+id/textView_p2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servicios disponibles en el hogar" />
 
         <CheckBox
             android:id="@+id/checkBox1"
@@ -94,98 +77,159 @@
             android:text="Otro" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView_p3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Número de habitaciones"
+    <LinearLayout
+        android:id="@+id/habitaciones"
+        android:layout_width="238dp"
+        android:layout_height="74dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
+        app:layout_constraintVertical_bias="0.499">
 
-    <EditText
-        android:id="@+id/editText_r3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ingrese respuesta"
-        android:inputType="textPersonName"
+        <TextView
+            android:id="@+id/textView_p3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de habitaciones" />
+
+        <EditText
+            android:id="@+id/editText_r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese respuesta"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/baños"
+        android:layout_width="237dp"
+        android:layout_height="79dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintVertical_bias="0.633">
 
-    <TextView
-        android:id="@+id/textView_p4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Número de baños"
+        <TextView
+            android:id="@+id/textView_p4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de baños" />
+
+        <EditText
+            android:id="@+id/editText_r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese respuesta"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tv"
+        android:layout_width="257dp"
+        android:layout_height="71dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.762">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ingrese respuesta"
-        android:inputType="textPersonName"
+        <TextView
+            android:id="@+id/textView_p5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuántas televisiones hay en su hogar?" />
+
+        <EditText
+            android:id="@+id/editText_r5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese respuesta"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/focos"
+        android:layout_width="300dp"
+        android:layout_height="69dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
+        app:layout_constraintVertical_bias="0.883">
 
-    <TextView
-        android:id="@+id/textView_p5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:text="¿Cuántas televisiones hay en su hogar?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759" />
+        <TextView
+            android:id="@+id/textView_p6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuántos focos de luz hay en su hogar?" />
 
-    <EditText
-        android:id="@+id/editText_r5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ingrese respuesta"
-        android:inputType="textPersonName"
+        <EditText
+            android:id="@+id/editText_r6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ingrese respuesta"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botones"
+        android:layout_width="255dp"
+        android:layout_height="54dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.976">
 
-    <TextView
-        android:id="@+id/textView_p6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¿Cuántos focos de luz hay en su hogar?"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="639dp" />
+        <Button
+            android:id="@+id/btn_omitir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="Omitir"
+            android:text="Omitir" />
 
-    <EditText
-        android:id="@+id/editText_r6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ingrese respuesta"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="670dp" />
+        <Button
+            android:id="@+id/btn_enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Enviar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/formulario"
+        android:layout_width="96dp"
+        android:layout_height="29dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022">
+
+        <TextView
+            android:id="@+id/textView_form"
+            android:layout_width="86dp"
+            android:layout_height="28dp"
+            android:text="Formulario" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
