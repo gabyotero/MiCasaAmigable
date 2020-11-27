@@ -27,7 +27,9 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
     private String url_p="https://casaamigable.000webhostapp.com/";
     private Context context;
     private String info,nombre,pass,name,lastn;
+    private String r1, r3, r4, r5, r6;
 
+    //Registro
     public Restful(Context context, String info,String nombre,String pass, String name, String lastn) {
         this.context = context;
         this.info=info;
@@ -38,6 +40,8 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
         HTTP_RESTFUL=getURL(info);
         Log.d("url","url:"+HTTP_RESTFUL);
     }
+
+    //Login
     public Restful(Context context, String info,String nombre,String pass) {
         this.context = context;
         this.info=info;
@@ -47,13 +51,25 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
         Log.d("url","url:"+HTTP_RESTFUL);
     }
 
+    //Formulario
+    public Restful(Context context, String info, String r1,String r3, String r4, String r5, String r6) {
+        this.context = context;
+        this.info=info;
+        this.r1=r1;
+        this.r3=r3;
+        this.r4=r4;
+        this.r5=r5;
+        this.r6=r6;
+        HTTP_RESTFUL=getURL(info);
+        Log.d("url","url:"+HTTP_RESTFUL);
+    }
+    //GetData
     public Restful(Context context, String info) {
         this.context = context;
         this.info=info;
         HTTP_RESTFUL=getURL(info);
         Log.d("url","url:"+HTTP_RESTFUL);
     }
-
     /**
      * Metodo que se conecta al RESTFUL para obtener un resultado
      * */
@@ -105,6 +121,11 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
                             list3[0][0]=status;
                             list3[0][1]=row.getString("respuesta");
                             //list3[i][0]=row.getString("login");
+                            break;
+                        case "enviar":
+                            list3[0][0]=status;
+                            list3[0][1]=row.getString("respuesta");
+                            //list3[i][0]=row.getString("enviar");
                             break;
                         case "GetData":
                             list3[0][0]=status;
@@ -178,8 +199,9 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
                            ((MainActivity)context).datosOk();
                         else ((MainActivity)context).mensaje("verifica tus datos");
                         break;
-
-
+                    case "enviar":
+                            ((Formulario)context).formOk();
+                         break;
                 }
             } else {
                 if (resul[0][0].equals("500")) {
@@ -200,7 +222,7 @@ public class Restful  extends AsyncTask<Void,Void,String[][]> {
             case "registro": return url_p+"control.php?action=registro&usr="+nombre+"&pass="+pass+"&name="+name+"&lastn"+lastn;
             case "login": return url_p+"control.php?action=login&usr="+nombre+"&pass="+pass;
             case "GetData": return url_p+"control.php?action="+info;
-
+            case "enviar": return url_p+"control.php?action=enviar&r1="+r1+"&r3="+r3+"&r4="+r4+"&r5="+r5+"&r6"+r6;
             default: return url_p+"control_p.php?action=error";
         }
     }

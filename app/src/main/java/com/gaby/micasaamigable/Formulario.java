@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Formulario extends AppCompatActivity {
     EditText editText_r1, editText_r3, editText_r4, editText_r5, editText_r6;
@@ -57,5 +58,22 @@ public class Formulario extends AppCompatActivity {
     public void Omitir(View view) {
         Intent x = new Intent(this,MenuPrincipal.class);
         startActivity(x);
+    }
+
+    public void Enviar(View view) {
+        new Restful(this, "enviar",
+                editText_r1.getText().toString(),
+                editText_r3.getText().toString(),
+                editText_r4.getText().toString(),
+                editText_r5.getText().toString(),
+                editText_r6.getText().toString()).execute();
+    }
+    public void formOk(){
+        mensaje("Tu registro ha sido guardado");
+        Intent i = new Intent(this,MenuPrincipal.class);
+        startActivity(i);      //Abrir una actividad nueva
+    }
+    public void mensaje(String s){
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 }
