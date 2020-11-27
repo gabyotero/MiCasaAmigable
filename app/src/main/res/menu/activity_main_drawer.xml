@@ -5,19 +5,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/aqua"
+            android:id="@+id/aqua3"
             android:icon="@drawable/aqua"
             android:title="Aqua friend" />
         <item
-            android:id="@+id/reciclaje"
+            android:id="@+id/reciclar"
             android:icon="@drawable/reciclar"
             android:title="Reciclaje Creativo" />
         <item
-            android:id="@+id/comida"
+            android:id="@+id/comida3"
             android:icon="@drawable/comida"
             android:title="Hora de comer" />
         <item
-            android:id="@+id/basura"
+            android:id="@+id/basura3"
             android:icon="@drawable/basura"
             android:title="Basura en su lugar"
             />

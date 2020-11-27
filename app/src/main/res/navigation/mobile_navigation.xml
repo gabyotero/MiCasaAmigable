@@ -3,33 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/aqua">
-
+    app:startDestination="@id/aqua3">
     <fragment
-        android:id="@+id/aqua"
-        android:name="com.gaby.micasaamigable.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/reciclaje"
-        android:name="com.gaby.micasaamigable.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/reciclar"
+        android:name="com.gaby.micasaamigable.reciclar"
+        android:label="fragment_reciclar"
+        tools:layout="@layout/fragment_reciclar" />
     <fragment
         android:id="@+id/vidaverde"
-        android:name="com.gaby.micasaamigable.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:name="com.gaby.micasaamigable.vidaverde"
+        android:label="fragment_vidaverde"
+        tools:layout="@layout/fragment_vidaverde" />
     <fragment
-        android:id="@+id/basura2"
-        android:name="com.gaby.micasaamigable.Basura"
-        android:label="fragment_basura"
-        tools:layout="@layout/fragment_basura" />
+        android:id="@+id/aqua3"
+        android:name="com.gaby.micasaamigable.aqua"
+        android:label="fragment_aqua"
+        tools:layout="@layout/fragment_aqua" />
     <fragment
-        android:id="@+id/comida2"
+        android:id="@+id/comida3"
         android:name="com.gaby.micasaamigable.comida"
         android:label="fragment_comida"
         tools:layout="@layout/fragment_comida" />
+    <fragment
+        android:id="@+id/basura3"
+        android:name="com.gaby.micasaamigable.basura"
+        android:label="fragment_basura"
+        tools:layout="@layout/fragment_basura" />
 </navigation>
