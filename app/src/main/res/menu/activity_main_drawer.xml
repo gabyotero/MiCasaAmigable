@@ -5,16 +5,28 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/aqua"
+            android:icon="@drawable/aqua"
+            android:title="Aqua friend" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/reciclaje"
+            android:icon="@drawable/reciclar"
+            android:title="Reciclaje Creativo" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/comida"
+            android:icon="@drawable/comida"
+            android:title="Hora de comer" />
+        <item
+            android:id="@+id/basura"
+            android:icon="@drawable/basura"
+            android:title="Basura en su lugar"
+            />
+        <item
+            android:id="@id/vidaverde"
+            android:icon="@drawable/vidaverde"
+            android:title="Vida verde"
+            />
+
+
     </group>
 </menu>
